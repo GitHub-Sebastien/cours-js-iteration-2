@@ -1,6 +1,5 @@
 {
-    "objects":[
-        {
+    "objects": [{
             "serial": "OBJ_001",
             "type": "raspberry_TH",
             "image": "raspberry-pi-4.jpg",
@@ -8,7 +7,7 @@
             "location": "45.644065, 5.867810",
             "refresh": 5,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
@@ -21,7 +20,7 @@
             "location": "45.185679, 5.727761",
             "refresh": 5,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
@@ -34,7 +33,7 @@
             "location": "44.932990, 4.890915",
             "refresh": 5,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
@@ -47,7 +46,7 @@
             "location": "45.907998, 6.102729",
             "refresh": 5,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
@@ -60,7 +59,7 @@
             "location": "45.644065, 5.867810",
             "refresh": 5,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
@@ -73,7 +72,7 @@
             "location": "45.185679, 5.727761",
             "refresh": 5,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
@@ -86,7 +85,7 @@
             "location": "44.932990, 4.890915",
             "refresh": 5,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
@@ -99,19 +98,19 @@
             "location": "45.907998, 6.102729",
             "refresh": 5,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
         },
         {
             "serial": "OBJ_009",
-            "type": "Digital_C02",
-            "description": "Capteur de mesure du C02 de la salle de cours du Campus de Chambéry",
+            "type": "Digital_CO2",
+            "description": "Capteur de mesure du CO2 de la salle de cours du Campus de Chambéry",
             "location": "45.644065, 5.867810",
             "refresh": 60,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
@@ -124,7 +123,7 @@
             "location": "45.644065, 5.867810",
             "refresh": 0,
             "status": true,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
@@ -137,15 +136,15 @@
             "location": "45.644065, 5.867810",
             "refresh": 0,
             "status": false,
-            "provisionning":{
+            "provisionning": {
                 "date": "2020-03-20",
                 "operator": "JPA"
             }
         }
 
     ],
-    "types":{
-        "raspberry_TH":{
+    "types": {
+        "raspberry_TH": {
             "sensors": [
                 "humidity", "temperature"
             ],
@@ -153,7 +152,7 @@
             "default_image": "raspberry-pi-4.jpg",
             "communication": "wifi"
         },
-        "raspberry_AQ":{
+        "raspberry_AQ": {
             "sensors": [
                 "pm2_5", "pm10", "CO2"
             ],
@@ -161,7 +160,7 @@
             "default_image": "raspberry-pi-4.jpg",
             "communication": "wifi"
         },
-        "Digital_CO2":{
+        "Digital_CO2": {
             "sensors": [
                 "CO2"
             ],
@@ -169,7 +168,7 @@
             "default_image": "CO2_detector.jpg",
             "communication": "lorawan"
         },
-        "arduino_acc":{
+        "arduino_acc": {
             "sensors": [
                 "acc_x", "acc_y", "acc_z"
             ],
@@ -177,7 +176,7 @@
             "default_image": "arduino_accelero.png",
             "communication": "wifi"
         },
-        "arduino_presence":{
+        "arduino_presence": {
             "sensors": [
                 "distance", "presence"
             ],
@@ -192,52 +191,52 @@
     "communication": [
         "wifi", "lorawan"
     ],
-    "data_formats":{
-        "temperature":{
+    "data_formats": {
+        "temperature": {
             "data_type": "number",
             "unit": "°C"
         },
-        "humidity":{
+        "humidity": {
             "data_type": "number",
             "unit": "%"
         },
-        "sound_level":{
+        "sound_level": {
             "data_type": "number",
             "unit": "dB"
         },
-        "pm2_5":{
+        "pm2_5": {
             "data_type": "number",
             "unit": "ppm"
         },
-        "pm10":{
+        "pm10": {
             "data_type": "number",
             "unit": "ppm"
         },
-        "CO2":{
+        "CO2": {
             "data_type": "number",
             "unit": "ppm"
         },
-        "weight":{
+        "weight": {
             "data_type": "number",
             "unit": "g"
         },
-        "distance":{
+        "distance": {
             "data_type": "number",
             "unit": "m"
         },
-        "presence":{
+        "presence": {
             "data_type": "boolean",
             "unit": ""
         },
-        "acc_x":{
+        "acc_x": {
             "data_type": "number",
             "unit": ""
         },
-        "acc_y":{
+        "acc_y": {
             "data_type": "number",
             "unit": ""
         },
-        "acc_z":{
+        "acc_z": {
             "data_type": "number",
             "unit": ""
         }
