@@ -164,7 +164,7 @@
             "sensors": [
                 "CO2"
             ],
-            "description": "Capteur de mesure du C02",
+            "description": "Capteur de mesure du CO2",
             "default_image": "CO2_detector.jpg",
             "communication": "lorawan"
         },
@@ -184,9 +184,6 @@
             "default_image": "arduino_presence.jpg",
             "communication": "lorawan"
         }
-
-
-
     },
     "communication": [
         "wifi", "lorawan"

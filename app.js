@@ -66,7 +66,7 @@ function comms() {
  */
 function objects() {
     var obj = { "objects": data.objects };
-    console.log(obj);
+    //console.log(obj);
 
     return obj;
 }
@@ -87,7 +87,7 @@ function types() {
     for (var p in obj) {
         arr.push(obj[p]);
     }
-    console.log(arr);
+    // console.log(arr);
     return { "types": arr };
 }
 
@@ -107,7 +107,7 @@ function formats() {
     for (var p in obj) {
         arr.push(obj[p]);
     }
-    console.log(arr);
+    //console.log(arr);
     return { "formats": arr };
 }
 
@@ -126,12 +126,8 @@ function objects_serials() {
     var arr = [];
 
     for (var p in obj) {
-
         arr.push(obj[p].serial);
-        console.log(obj[p].serial);
     }
-    console.log(arr);
-
     return { "objects": arr };
 }
 
@@ -144,13 +140,17 @@ function objects_serials() {
  */
 function get_object_by_serial(serial) {
 
-    var obj = data.objects;
+    let obj = data.objects;
     var arr = [];
 
-    console.log(obj);
 
+    for (i = 0; i < obj.length; i++) {
+        if (obj[i].serial === serial) {
 
-    //return serial;
+            return obj[i];
+        }
+    }
+    return undefined;
 }
 
 /**
@@ -161,9 +161,19 @@ function get_object_by_serial(serial) {
  * liste des objets ayant l'opérateur passé en paramètre.
  */
 function get_objects_by_operator(operator) {
-    return operator;
-}
+    let obj = data.objects;
+    let arr = [];
+    for (i = 0; i < obj.length; i++) {
+        if (obj[i].provisionning.operator === operator) {
+            arr.push(obj[i]);
+        }
+    }
+    if (arr.length == 0) {
+        return undefined;
+    }
 
+    return { "objects": arr };
+}
 /**
  * Cette fonction est exécutée lorsqu'on demande l'adresse
  * http://localhost:5000/types/comm/<comm> représentée par la route '/types/comm/:comm'
@@ -172,9 +182,19 @@ function get_objects_by_operator(operator) {
  * ayant pour mode de communication celui passé en paramètre.
  */
 function get_types_by_comm(comm) {
-    return comm;
-}
+    let obj = data.types;
+    let arr = [];
 
+    for (k in obj) {
+        if (obj[k].communication == comm) {
+            arr.push(obj[k].communication);
+        }
+    }
+    if (arr.length == 0) {
+        return undefined;
+    }
+    return { "types": arr };
+}
 /**
  * Cette fonction est exécutée lorsqu'on demande l'adresse
  * http://localhost:5000/types/format/<format> représentée par la route '/types/format/:format'
@@ -182,9 +202,22 @@ function get_types_by_comm(comm) {
  * Elle retourne un objet javascript contenant une liste de types
  * ayant pour un format de données celui passé en paramètre.
  */
+
 function get_types_by_format(format) {
-    return format;
+    let obj = data.data_types;
+    let arr = [];
+
+    for (k in obj) {
+        if (obj[k] == format) {
+            arr.push(obj[k].data_formats);
+        }
+    }
+    if (arr.length == 0) {
+        return undefined;
+    }
+    return { "types": arr };
 }
+
 
 /**
  * Cette fonction est exécutée lorsqu'on demande l'adresse
