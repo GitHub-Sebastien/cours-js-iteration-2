@@ -28,6 +28,13 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
+            <script>
+                window.addEventListener('load', function() {
+                    load_components();
+                });
+            </script>
+
+
 
         </nav>
 
@@ -35,15 +42,13 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4" id="side">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
-                <img src="/static/images/le-campus.jpg" alt="Logo Campus" class="brand-image elevation-3"
-                    style="opacity: .9; background-color: white;">
+                <img src="/static/images/le-campus.jpg" alt="Logo Campus" class="brand-image elevation-3" style="opacity: .9; background-color: white;">
                 <span class="brand-text font-weight-light">IoT Chambéry</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
                 <nav class="mt-2">
-                    <ul id="generated_menu" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview"
-                        role="menu" data-accordion="false">
+                    <ul id="generated_menu" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item has-treeview">
                             <a href="/objects.html" class="nav-link">
                                 <i class="nav-icon fas fa-object-group"></i>
@@ -54,21 +59,24 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-code"></i>
                                 <p>Exemples</p>
+
                             </a>
+
+
                             <ul class="nav nav-treeview" style="display: none;">
                                 <li class="nav-item">
-                                  <a href="/examples/modal.html" class="nav-link">
-                                    <i class="fas fa-pager nav-icon"></i>
-                                    <p>Modale</p>
-                                  </a>
+                                    <a href="/examples/modal.html" class="nav-link">
+                                        <i class="fas fa-pager nav-icon"></i>
+                                        <p>Modale</p>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                  <a href="/examples/tri.html" class="nav-link">
-                                    <i class="fas fa-random nav-icon"></i>
-                                    <p>Tri</p>
-                                  </a>
+                                    <a href="/examples/tri.html" class="nav-link">
+                                        <i class="fas fa-random nav-icon"></i>
+                                        <p>Tri</p>
+                                    </a>
                                 </li>
-                            </ul>                  
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -82,6 +90,7 @@
                     <h1 id="content_title">Gestion du parc d'objets</h1>
                 </div>
             </section>
+
 
             <div class="content" id="content_div">
                 <div class="row">
@@ -114,6 +123,7 @@
                 </div>
             </div>
 
+
             <!-- Fenêtre modale affichant les détail -->
             <div class="modal fade" id="modal-details" style="display: none;" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
@@ -144,12 +154,14 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" id="footer">
+
             <strong>Copyright &copy; 2020 <a href="https://www.le-campus-numerique.fr/">Le Campus Numérique in the
                     Alps</a>.</strong> All rights reserved.
             <div class="loat-right d-none d-sm-inline-block">
                 <b>Version</b> 1.0.0
             </div>
         </footer>
+
 
     </div>
 
@@ -161,10 +173,15 @@
     <!-- AdminLTE -->
     <script src="/static/adminlte/dist/js/adminlte.js"></script>
 
+    <script src="/static/js/objects.js"></script>
+    <script>
+        load_components();
+    </script>
+    <script>
+        window.onload = load_components();
+    </script>
 
-    <!-- 
-        Ajouter votre script javascript personnélisé ici 
-    -->
+
 
 </body>
 
